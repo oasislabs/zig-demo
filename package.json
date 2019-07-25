@@ -1,0 +1,16 @@
+{
+  "name": "zig-oasis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@oasislabs/client": "^1.0.0-rc.6",
+    "convert-hex": "^0.1.0"
+  }
+}
