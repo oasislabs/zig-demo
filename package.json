@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@oasislabs/client": "^1.0.0-rc.6",
-    "convert-hex": "^0.1.0"
+    "@oasislabs/client": "^1.0.0-rc.6"
   }
 }

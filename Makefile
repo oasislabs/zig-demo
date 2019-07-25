@@ -1,4 +1,7 @@
-.PHONY: all clean
+.PHONY: all clean test
+
+test: build/hello_service.wasm | node_modules/.installed
+	node test.js
 
 build/hello_service.wasm: build/hello.wasm attach-iface/src/main.rs
 	cargo run --manifest-path attach-iface/Cargo.toml
@@ -11,7 +14,12 @@ build/hello: hello.zig | build
 	zig build-exe $^ --library c --output-dir $(@D) --release-fast
 
 build:
-	mkdir build
+	@mkdir build
+
+node_modules/.installed:
+	npm install
+	@touch node_modules/.installed
+	git co node_modules/@oasislabs
 
 clean:
-	rm -rf build
+	git clean -dfX

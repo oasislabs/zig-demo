@@ -1,5 +1,4 @@
 const oasis = require('@oasislabs/client');
-const convertHex = require('convert-hex');
 
 let gateway = new oasis.gateways.Web3Gateway(
   'ws://localhost:8546',
@@ -18,7 +17,6 @@ let service = oasis
     options: {gasLimit: 1000000},
   })
   .then(service => {
-    console.log('deployed');
     return service.hello();
   })
   .then((response, asdf) => {
