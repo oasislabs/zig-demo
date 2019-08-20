@@ -17,7 +17,7 @@ let service = oasis
     options: {gasLimit: 1000000},
   })
   .then(service => {
-    return service.hello();
+    return service.hello({ gasLimit: '0x100000' });
   })
   .then((response, asdf) => {
     console.log(response);
